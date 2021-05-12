@@ -1,0 +1,28 @@
+/* Comment this out to disable prints and save space */
+#define BLYNK_PRINT Serial
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+char auth[] = "XYi9eVr6Bgoyv2Ik0e6rzwjYTDey995h";
+
+// Your WiFi credentials.
+char ssid[] = "nurhayaree.qz";
+char pass[] = "10012544";
+
+void setup()
+{
+  // Debug console
+  Serial.begin(9600);
+
+  //Blynk.begin(auth, ssid, pass);
+
+  Blynk.syncAll();
+}
+
+void loop()
+{
+  Blynk.run();
+}
